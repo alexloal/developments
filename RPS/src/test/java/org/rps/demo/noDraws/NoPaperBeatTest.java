@@ -1,0 +1,25 @@
+package org.rps.demo.noDraws;
+
+import static org.junit.Assert.assertTrue;
+
+import org.junit.Test;
+import org.rps.demo.business.Rps;
+import org.rps.demo.constants.Enums;
+
+/**
+ * 
+ * @author Alejandro Lopez Almodovar
+ *
+ */
+public class NoPaperBeatTest {
+
+	@Test
+	public final void testNoPaperBeat() {
+		Enums.Result result = Rps.whoBeats(Enums.Hands.PAPER, Enums.Hands.SCISSORS);
+		assertTrue("Paper vs Scissors beats Scissors", result != null && Enums.Result.PLAYER2 == result);
+		
+		result = Rps.whoBeats(Enums.Hands.SCISSORS, Enums.Hands.PAPER);
+		assertTrue("Scissors vs Paper beats Paper", result != null && Enums.Result.PLAYER1 == result);
+	}
+
+}
