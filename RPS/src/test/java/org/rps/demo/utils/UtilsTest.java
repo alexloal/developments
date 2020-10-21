@@ -45,7 +45,7 @@ public class UtilsTest {
 	public void testRandomHand() {
 		Hands hand = Utils.giveMeRandomHand();
 		assertTrue("The hand is Paper, Rock o Scissors",
-				hand != null && (hand == Hands.PAPER || hand == Hands.ROCK || hand == Hands.SCISSORS));
+				(hand == Hands.PAPER || hand == Hands.ROCK || hand == Hands.SCISSORS));
 	}
 
 	@Test
@@ -53,7 +53,7 @@ public class UtilsTest {
 		for (int i = 0; i <= 999; i++) {
 			Hands hand = Utils.giveMeRandomHand();
 			assertTrue("All the hands are Paper, Rock o Scissors",
-					hand != null && (hand == Hands.PAPER || hand == Hands.ROCK || hand == Hands.SCISSORS));
+					(hand == Hands.PAPER || hand == Hands.ROCK || hand == Hands.SCISSORS));
 		}
 	}
 

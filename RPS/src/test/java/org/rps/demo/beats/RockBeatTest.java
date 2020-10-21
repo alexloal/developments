@@ -1,5 +1,6 @@
 package org.rps.demo.beats;
 
+import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
@@ -15,9 +16,9 @@ public class RockBeatTest {
 	@Test
 	public final void testRockBeatScissors() {
 		Enums.Result result = Rps.whoBeats(Enums.Hands.ROCK, Enums.Hands.SCISSORS);
-		assertTrue("Rock vs Scissors beats ROCK", result != null && Enums.Result.PLAYER1 == result);
+		assertSame("Rock vs Scissors beats ROCK", Enums.Result.PLAYER1, result);
 		
 		result = Rps.whoBeats(Enums.Hands.SCISSORS, Enums.Hands.ROCK);
-		assertTrue("Scissors vs Rock beats ROCK", result != null && Enums.Result.PLAYER2 == result);
+		assertSame("Scissors vs Rock beats ROCK", Enums.Result.PLAYER2, result);
 	}
 }

@@ -1,5 +1,6 @@
 package org.rps.demo.noDraws;
 
+import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
@@ -16,10 +17,10 @@ public class NoRockBeatTest {
 	@Test
 	public final void testNoRockBeatScissors() {
 		Enums.Result result = Rps.whoBeats(Enums.Hands.ROCK, Enums.Hands.PAPER);
-		assertTrue("Rock vs Paper beats Paper", result != null && Enums.Result.PLAYER2 == result);
+		assertSame("Rock vs Paper beats Paper", Enums.Result.PLAYER2, result);
 		
 		result = Rps.whoBeats(Enums.Hands.PAPER, Enums.Hands.ROCK);
-		assertTrue("Paper vs Rock beats Paper", result != null && Enums.Result.PLAYER1 == result);
+		assertSame("Paper vs Rock beats Paper", Enums.Result.PLAYER1, result);
 	}
 
 }

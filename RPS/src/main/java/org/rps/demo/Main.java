@@ -3,6 +3,8 @@ package org.rps.demo;
 import org.rps.demo.business.Rps;
 import org.rps.demo.model.ResultBoard;
 
+import static java.lang.System.out;
+
 /**
  * 
  * @author Alejandro Lopez Almdovar
@@ -17,10 +19,10 @@ public class Main {
 	 *            for the main method
 	 */
 	public static void main(String[] args) {
-		System.out.println("************** RPS demo **************");
+		out.println("************** RPS demo **************");
 		ResultBoard result = Rps.giveMeOneHundredPlays();
-		System.out.println(result.toString());
-		System.out.println("**************************************");
+		out.println(result.toString());
+		out.println("**************************************");
 
 	}
 

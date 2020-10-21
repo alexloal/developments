@@ -7,11 +7,11 @@ package org.rps.demo.constants;
  */
 public class Const {
 
-	/** Min ramdon value */
+	/** Min random value */
 	public static final int MIN_RANDOM = 1;
 	/** TWO */
 	public static final int TWO = 2;
-	/** Max ramdon value */
+	/** Max random value */
 	public static final int MAX_RANDOM = 3;
 	/** Regular expression for delimiter of digits */
 	public static final String DELIMITER = "[^\\d]+";
